@@ -1,0 +1,20 @@
+# If not set, map server will try to determine correct map via parameter server
+std_msgs/Bool use_map_name
+
+# Map name without .osm extension (which is assumed). 
+# Must map_name.osm must be located here https://git.uwaterloo.ca/WATonomous/map_data/-/tree/master/osm
+std_msgs/String map_name
+
+
+
+# If set, utm_origin will be used instead of default configured
+std_msgs/Bool use_origin
+
+# UTM origin to project map onto, see https://github.com/fzi-forschungszentrum-informatik/Lanelet2/blob/master/lanelet2_projection/doc/Map_Projections_Coordinate_Systems.md
+geographic_msgs/GeoPoint utm_origin
+
+---
+
+# Binary data of requested map projected accordingly
+# See https://github.com/Autoware-AI/common/tree/master/lanelet2_extension#message-conversion for details
+autoware_lanelet2_msgs/MapBin map_bin

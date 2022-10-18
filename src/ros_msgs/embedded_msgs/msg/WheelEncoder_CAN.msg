@@ -1,0 +1,18 @@
+int8 driven_left_wheel_rollover
+int8 driven_left_wheel_sequence
+int32 driven_left_wheel_timestamp
+int32 driven_left_wheel_pulse
+int8 driven_right_wheel_rollover
+int8 driven_right_wheel_sequence
+int32 driven_right_wheel_timestamp
+int32 driven_right_wheel_pulse
+
+int8 NonDriven_left_wheel_rollover
+int8 NonDriven_left_wheel_sequence
+int32 NonDriven_left_wheel_timestamp
+int32 NonDriven_left_wheel_pulse
+int8 NonDriven_right_wheel_rollover
+int8 NonDriven_right_wheel_seqeunce
+int32 NonDriven_right_wheel_timestamp
+int32 NonDriven_right_wheel_pulse
+

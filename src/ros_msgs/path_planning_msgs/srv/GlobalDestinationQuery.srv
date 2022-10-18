@@ -1,0 +1,16 @@
+string destination
+---
+int32 link_id
+
+# The node that the ego will arrive if it drives down link_id and passes the destination
+#   e.g. if destination is on the right side of the street, forward_node_ids=[link_id.nref_node_id]
+#        if destination is on the left side of the street, forward_node_ids=[link_id.ref_node_id]
+# Note that if the destination can be reached from both sides of the street, then the ego can arrive at either 
+#  link_id.nref_node_id or link_id.ref_node_id, therefore forward_node_ids=[link_id.nref_node_id, link_id.ref_node_id]
+int32[] forward_node_ids
+
+# The fraction of the link destination appears at, from link_id.ref_node_id -> link_id.nref_node_id
+float64 link_frac
+
+# The location of the desitnation in some coordinate frame, usually odom/map AKA UTM17N (EPSG 26917)
+geometry_msgs/Point location

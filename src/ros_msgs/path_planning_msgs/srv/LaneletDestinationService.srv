@@ -1,0 +1,11 @@
+# The street address given by the competition
+# Or the Carla location in "x,y" format
+std_msgs/String destination_address
+
+---
+
+# Lanlet(s) that the ego vehicle must be on to complete the address
+int32[] destination_lanelets
+
+# Location of the destination in the map frame
+geometry_msgs/Point destination_point

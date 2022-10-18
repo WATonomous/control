@@ -1,0 +1,36 @@
+ <launch>
+    <!-- Perception -->
+    <param name="/perception_topics/ROAD_LINE_TOPIC" type="str" value="/roadline_post_processing" /> 
+    <param name="/perception_topics/TRAFFIC_LIGHT_TOPIC" type="str" value="/traffic_light_detection" /> 
+    <param name="/perception_topics/TRAFFIC_SIGN_TOPIC" type="str" value="/traffic_sign_detection" /> 
+    <param name="/perception_topics/LIDAR_DETECTION_TOPIC" type="str" value="/object_detection" /> 
+    <param name="/perception_topics/OBSTACLE_TOPIC" type="str" value="/obstacle_detection" /> 
+    <!-- Perception - internal topics -->
+    <param name="/perception_topics/JSK_LIDAR_BOXES_TOPIC" type="str" value="/jsk_bboxes" /> 
+    <param name="/perception_topics/MERGED_LIDAR_TOPIC" type="str" value="/lidar_merged_visualized" /> 
+    <param name="/perception_topics/OBSTACLE_DEBUG_TOPIC" type="str" value="/obstacle_detection_visualizer" /> 
+    <param name="/perception_topics/ROAD_LINE_DEBUG_TOPIC" type="str" value="/roadline_detection_visualizer" /> 
+    <param name="/perception_topics/ROAD_LINE_MASK_DEBUG_TOPIC" type="str" value="/raw_mask_roadline_detection_visualizer" /> 
+    <param name="/perception_topics/TRAFFIC_LIGHT_DEBUG_TOPIC" type="str" value="/traffic_light_detection_visualizer" /> 
+    <param name="/perception_topics/TRAFFIC_SIGN_DEBUG_TOPIC" type="str" value="/traffic_sign_detection_visualizer" /> 
+    <param name="/perception_topics/ROAD_LINE_MASK_TOPIC" type="str" value="/roadline_detections" /> 
+    <param name="/perception_topics/TRAFFIC_LIGHT_INTERNAL_TOPIC" type="str" value="/traffic_light_internal" /> 
+
+    <!-- Processing -->
+    <param name="/processing_topics/LANE_POST_TOPIC" type="str" value="/processing/roadline_post_processing" /> 
+    <param name="/processing_topics/STOP_DETECT_TOPIC" type="str" value="/processing/stopline_detection_output" /> 
+    <param name="/processing_topics/ENV_OUTPUT_TOPIC" type="str" value="/processing/environment_prediction" /> 
+    <param name="/processing_topics/HLDF_OUTPUT_TOPIC" type="str" value="/processing/environment_hldf" /> 
+    <param name="/processing_topics/HD_MAP_TOPIC" type="str" value="/processing/hd_map" /> 
+
+    <!-- Path Planning -->
+    <param name="/path_planning_topics/ENVIRONMENT_TOPIC" type="str" value="/path_planning/environment" /> 
+    <param name="/path_planning_topics/PATH_TOPIC" type="str" value="/path_planning/path" /> 
+    <param name="/path_planning_topics/CAN_TOPIC" type="str" value="/path_planning/feedback_desired_output" /> 
+
+    <!-- Sensors -->
+    <param name="/sensor_topics/CAMERA_RFL_RAW" type="str" value="/sensor/camera/rfl_raw" /> 
+    <param name="/sensor_topics/CAMERA_RFR_RAW" type="str" value="/sensor/camera/rfr_raw" /> 
+    <param name="/sensor_topics/CAMERA_BC_RAW" type="str" value="/sensor/camera/bc_raw" /> 
+    <param name="/sensor_topics/ODOM_TOPIC" type="str" value="/navsat/odom" /> 
+</launch>

@@ -1,0 +1,3 @@
+int32 link_id
+---
+path_planning_msgs/GlobalLink link

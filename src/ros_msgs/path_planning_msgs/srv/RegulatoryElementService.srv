@@ -1,0 +1,4 @@
+---
+# Returns binary data for all regulatory elements in the map
+# See https://github.com/Autoware-AI/common/tree/master/lanelet2_extension#message-conversion for details
+autoware_lanelet2_msgs/MapBin map_bin

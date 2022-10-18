@@ -1,0 +1,18 @@
+Header header
+
+int16 initial_behavioural_state
+int16 final_behavioural_state
+path_planning_msgs/GoalLine goal_line
+
+
+path_planning_msgs/Path prev_path
+bool high_accuracy
+path_planning_msgs/VehicleState planner_start
+path_planning_msgs/CostmapConfig costmap_config
+
+float64 start_t
+float64 behavioural_start_t
+float64 behavioural_end_t
+float64 local_end_t
+float64 end_t
+float64 diag_end_t

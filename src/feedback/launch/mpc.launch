@@ -1,0 +1,8 @@
+<launch>
+  <arg name="config_file_path" default="$(find pp_feedback)/mpc/config.yml"/>
+    <group ns="mpc">
+        <rosparam file="$(arg config_file_path)" />
+    </group>
+  <node pkg="pp_feedback" type="spline.py" name="mpc_spline" output="screen" />
+  <node pkg="pp_feedback" type="mpc_main.py" name="mpc_main" output="screen"/>
+</launch>

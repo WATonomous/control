@@ -1,0 +1,10 @@
+Header header
+
+float64 resolution
+float64 min_cost
+path_planning_msgs/LinearBlur collision_blur
+path_planning_msgs/LinearBlur lane_line_blur
+path_planning_msgs/LinearBlur lane_center_blur
+float64 prev_path_max_threshold
+float64 prev_path_min_threshold
+path_planning_msgs/LinearBlur prev_path_blur

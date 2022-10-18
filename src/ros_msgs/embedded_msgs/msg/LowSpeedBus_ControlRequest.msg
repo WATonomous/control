@@ -1,0 +1,9 @@
+int8 horn
+bool low_beam_lamps
+bool right_turn_lamps
+bool left_turn_lamps
+bool hazard_lamps
+bool overhead_courtesy_lamps
+bool pedestrian_friendly_alert
+bool lock
+bool unlock

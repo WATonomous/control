@@ -1,0 +1,10 @@
+# The center of the base of the rectangle to be queried, in the map frame
+# Orientation assumes right handed system, zero degrees around Z-axis defined as off the X-axis
+geometry_msgs/Pose pose
+# The width (left <-> right) of the rectangle to be queried
+float64 width
+# The length (how far forward starting at pose) the rectangle extends
+float64 length
+---
+# An unordered collection of polylines that are in the HD map within the bounds defined by query
+common_msgs/HDMLaneLine[] lane_lines

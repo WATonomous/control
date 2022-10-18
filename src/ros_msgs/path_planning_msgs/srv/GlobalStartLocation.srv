@@ -1,0 +1,12 @@
+# A pose that you want to be localized in the Nav Map, in some coordinate frame, usually odom/map AKA UTM17N (EPSG 26917)
+geometry_msgs/Pose pose
+---
+
+# Link that the pose is on or will be on if it drives forward
+int32 link_id
+
+# The node that pose will arrive at if it drives down link_id
+int32 forward_node_id
+
+# The fraction of the link pose is at, from link_id.ref_node_id -> link_id.nref_node_id
+float64 link_frac

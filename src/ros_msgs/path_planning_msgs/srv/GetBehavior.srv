@@ -1,0 +1,9 @@
+---
+path_planning_msgs/EgoVehicleState ego_state
+
+common_msgs/HDMLaneList lanelet_route
+geometry_msgs/Point[] local_reference
+geometry_msgs/Point[] global_reference
+
+geometry_msgs/Point stopping_point
+float64 stopping_distance

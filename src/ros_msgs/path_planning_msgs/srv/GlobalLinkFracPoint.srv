@@ -1,0 +1,8 @@
+int32 link_id
+# Fraction of the link to look at, oriented from link.ref_node -> link.nref_node
+float64 frac
+---
+# The location of the fraction in some coordinate frame, usually odom/map AKA UTM17N (EPSG 26917)
+geometry_msgs/Point point
+# The azimuth of the link at the point, again oriented from link.ref_node -> link.nref_node, in the same coordinate frame as point
+float64 azimuth

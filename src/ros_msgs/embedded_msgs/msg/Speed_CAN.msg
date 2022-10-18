@@ -1,0 +1,3 @@
+float64 calculated_speed_kmph
+float64 calculated_speed_mps
+time last_calculated

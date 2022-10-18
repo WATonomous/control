@@ -1,0 +1,88 @@
+# Vehicle body and dynamics variables
+body:
+  L: 5
+  footprint:
+    circle_placement: 1.38
+    circle_radius: 1.122
+    safety: 0.5
+  desired_fwd_vel: 8
+  bounds:
+    lon_accel_l: -3.5
+    lon_accel_u: 3.5
+    lat_accel_l: -3.5
+    lat_accel_u: 3.5
+    lon_jerk_l: -10
+    lon_jerk_u: 15
+    vel_l: 0
+    vel_u: 8
+    steer_l: -0.78539816339 # pi / 4
+    steer_u: 0.78539816339
+
+# NLP variables
+opt:
+  N: 15
+  T: 0.25
+  online_max_iters: 100
+  explore_max_iters: 200
+  max_iters: -1
+  obstacle_switch_dist: 5
+  stop_switch_frac: 0.75
+  weights:
+    # Set of weights to apply when the ego state is within <obstacle_switch_dist> of an obstacle
+    obstacle:
+      # Distance from spline reference
+      pos: 1
+      # How far along the sline we are
+      path_param: 1000
+      # Error to reference velocity
+      ref_vel: 0.0
+      # Potential field around obstacle
+      obs_dist: 0.0
+      # Penalize body frame lateral jerk
+      lat_jerk: 0.0
+    # Set of weights to apply when the ego state is not within <obstacle_switch_dist> of an obstacle
+    free:
+      pos: 1
+      path_param: 1
+      ref_vel: 0.0
+      lat_jerk: 0.0
+    stop:
+      pos: 1.0
+
+# Spline generation variables
+spline:
+  order: 10
+
+# Road boundary variables
+boundary:
+  strat: 'side' # 'side', 'halfplane', or 'none'
+  side:
+    lookahead: 0.01
+    padding: 0.2
+
+# Parallel solver variables
+parallel:
+  active: true
+  copy_warm: 0
+
+# Obstacle variables
+max_num_obs: 5
+num_obs: -1
+
+# How often (Hz) we interpolate between the first and second commands in the solver horizon
+interpolation_rate: 500
+
+# Occuancy clustering variables
+occ_cluster:
+  neighbor_rad: 4
+
+# Optimization -> CAN command mapping variables
+can:
+  Cd: 0.3 # Drag coefficient
+  Cr: 0.02 # Rolling Resistance
+  A: 2 # Frontal Area
+  rho: 1.2 # Air Density
+  m: 2500 # Vehicle mass (1616 kg) + 1 Passenger (74 kg)
+  r_wheel: 0.4 # Wheel radius
+  GearRatio: 7.05 # Final Gear ratio
+  g: 9.81 # Gravity

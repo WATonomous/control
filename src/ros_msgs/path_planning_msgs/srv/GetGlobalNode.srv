@@ -1,0 +1,3 @@
+int32 node_id
+---
+path_planning_msgs/GlobalNode node

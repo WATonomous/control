@@ -1,0 +1,17 @@
+# The starting pose of the route in some coordinate frame, usually odom/map AKA UTM17N (EPSG 26917)
+geometry_msgs/Pose pose
+
+
+# The name of the destination.
+# E.g. WATO E for WRESTRC nav map data source
+# E.g. 100 TRC Road (not real) for TRC nav map data source
+# E.g. 200,0,true for CARLA nav mapdata source
+
+# Note that for Carla, Must be formatted as "[x],[y],[optional_both_sides_flag]",
+    # where x and y are in the odom frame,
+    # and optional_both_sides_flag can be literally anything
+string destination
+---
+# Turn by turn directions to follow to get from pose to destination
+path_planning_msgs/GlobalCommand[] commands
+

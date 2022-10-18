@@ -1,0 +1,5 @@
+float64 brake_torque
+float64 brake_pressure_left_front
+float64 brake_pressure_right_front
+float64 brake_pressure_left_rear
+float64 brake_pressure_right_rear
